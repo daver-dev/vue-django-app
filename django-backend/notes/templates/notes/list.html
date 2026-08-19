@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Notes</h1>
+    <ul>
+        {% for note in notes %}
+        <li>
+            <strong>{{ note.title }}</strong>
+            <p>{{ note.body }}</p>
+        </li>
+        {% empty %}
+        <li>No notes yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
