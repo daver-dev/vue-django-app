@@ -7,3 +7,7 @@ A basic CRUD notes app using Django for a backend api and Vue.js for a frontend.
 Some validation:
 
 <img width="464" height="378" alt="image" src="https://github.com/user-attachments/assets/64d96787-30f6-4577-b2ce-7a93cb3f7d4b" />
+
+Django admin panel showing the new record:
+
+<img width="1225" height="752" alt="image" src="https://github.com/user-attachments/assets/17966fc9-d83a-4adb-a768-f713110e79b0" />
