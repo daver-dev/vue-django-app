@@ -52,24 +52,3 @@ Layout: `django-backend/` (Django API) and `vue-frontend/` (Vue SPA) as sibling 
 27. Create a `NotesList.vue` component that calls `fetch('http://localhost:8000/api/notes/')` (or `axios`) in `onMounted`, stores the result in a `ref`, and renders it with `v-for` — Vue's reactivity system (`ref`/`reactive`) is the equivalent of the state Django's template loop reads from `notes`
 28. Import and render `NotesList` from `App.vue`
 29. (Optional) Add a small form component that `POST`s a new note back to `/api/notes/`, so the round trip (Vue form → Django API → DB → back to Vue) is complete
-
-## Wrap-up talking points to be ready to discuss
-
-**Django**
-- MTV vs MVC naming
-- ORM vs raw SQL tradeoffs
-- what a migration is and why they're checked into version control
-- settings.py as the central config (DB, installed apps, middleware)
-- Django REST Framework as the common pairing for building APIs
-- SQLite vs Postgres: why Django defaults to SQLite (zero-config) but production/most real deployments use Postgres; swapping is just an `ENGINE` change plus a driver (`psycopg`), which speaks to the ORM's job of abstracting the specific database
-
-**Vue**
-- Composition API (`ref`/`reactive`, `<script setup>`) vs the older Options API
-- Single-File Components (`.vue`: template/script/style together) vs JSX
-- Vue's reactivity model vs React's virtual-DOM diffing, at a high level
-- Vite as the dev server/build tool (fast HMR) vs older webpack-based tooling
-
-**How the two sides fit together**
-- decoupled SPA + API architecture vs server-rendered templates: what you gain (frontend/backend can scale and deploy independently, any client can consume the API) and what you give up (extra moving parts: CORS, two dev servers, auth has to cross the boundary)
-- why CORS exists and why it bites people the first time they split frontend/backend onto different ports in dev
-- this project deliberately builds both the server-rendered version (steps 18-20) and the API + SPA version (steps 21-24) so you can speak to trade-offs between them, not just recite one approach
