@@ -1,4 +1,4 @@
-A basic CRUD notes app using Django for a backend api and Vue.js for a frontend. Stores data in Postgres, using a Docker container.
+A basic CRUD notes app using Django for a backend api and Vue.js for a frontend. Stores data in a Postgres DB running in a Docker container.
 
 <img width="707" height="591" alt="image" src="https://github.com/user-attachments/assets/162470ac-f51c-4751-9830-8db617dd130e" />
 <img width="707" height="594" alt="image" src="https://github.com/user-attachments/assets/9ec7423a-e230-4ff9-acfb-a49d42960090" />
